@@ -43,16 +43,32 @@ last(items,function(lastItem){
 
 function sumNums(x, y, cb) {
   // sumNums adds two numbers (x, y) and passes the result to the callback.
+  return cb(x,y);
 }
+sumNums(2,4,function(x,y){
+  console.log(x+y);
+});
 
 function multiplyNums(x, y, cb) {
   // multiplyNums multiplies two numbers and passes the result to the callback.
+  return cb(x,y);
 }
-
+multiplyNums(3,9,function(x,y,cb){
+  console.log(x*y);
+});
 function contains(item, list, cb) {
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
+  if(list.includes(item)){
+    return cb(true);
+  }
+  else{
+    return cb(false);
+  }
 }
+contains('yp-yo',items, function(result){
+  console.log(result);
+})
 
 /* STRETCH PROBLEM */
 
