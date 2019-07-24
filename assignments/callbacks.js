@@ -66,7 +66,7 @@ function contains(item, list, cb) {
     return cb(false);
   }
 }
-contains('yp-yo',items, function(result){
+contains('yo-yo',items, function(result){
   console.log(result);
 })
 

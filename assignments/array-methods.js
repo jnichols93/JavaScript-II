@@ -103,7 +103,7 @@ console.log(emailList);
 //show all of the runners with donations over 100.00
 let highRollers=[];
 highRollers=runners.filter(runner=>{
-    if (runner.donation < 100){
+    if (runner.donation >= 100){
         return runner;
     }
 });
